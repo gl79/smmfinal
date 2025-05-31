@@ -1,0 +1,176 @@
+@extends('page')
+@section('content')
+  <!-- Page Title -->
+  <div class="page-title light-background">
+    <div class="container d-lg-flex justify-content-between align-items-center">
+    <h1 class="mb-2 mb-lg-0">Masuk / Daftar</h1>
+    <nav class="breadcrumbs">
+      <ol>
+      <li><a href="index.php">Beranda</a></li>
+      <li class="current">Masuk / Daftar</li>
+      </ol>
+    </nav>
+    </div>
+  </div><!-- End Page Title -->
+
+  <!-- Login Register Section -->
+  <section id="login-register" class="login-register section">
+
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+    <div class="row justify-content-center">
+      <div class="col-lg-5">
+      <div class="login-register-wraper">
+
+        <!-- Tab Navigation -->
+        <ul class="nav nav-tabs nav-tabs-bordered justify-content-center mb-4" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#login-register-login-form"
+          type="button" role="tab" aria-selected="true">
+          <i class="bi bi-box-arrow-in-right me-1"></i>Masuk
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" data-bs-toggle="tab" data-bs-target="#login-register-registration-form"
+          type="button" role="tab" aria-selected="false">
+          <i class="bi bi-person-plus me-1"></i>Daftar
+          </button>
+        </li>
+        </ul>
+
+        <!-- Tab Content -->
+        <div class="tab-content">
+
+        <!-- Login Form -->
+        <div class="tab-pane fade show active" id="login-register-login-form" role="tabpanel">
+          <form>
+          <div class="mb-4">
+            <label for="login-register-login-email" class="form-label">Username / Email <span
+              class="text-danger">*</span></label>
+            <input type="email" class="form-control" id="login-register-login-email" required="">
+          </div>
+
+          <div class="mb-4">
+            <label for="login-register-login-password" class="form-label">Password <span
+              class="text-danger">*</span></label>
+            <input type="password" class="form-control" id="login-register-login-password" required="">
+          </div>
+
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="login-register-remember-me">
+            <label class="form-check-label" for="login-register-remember-me">Ingatkan Saya</label>
+            </div>
+            <a href="#" class="forgot-password">Lupa Password ?</a>
+          </div>
+
+          <div class="d-grid">
+            <button type="submit" class="btn btn-primary btn-lg">Masuk</button>
+          </div>
+          </form>
+        </div>
+
+        <!-- Registration Form -->
+        <div class="tab-pane fade" id="login-register-registration-form" role="tabpanel">
+          <form>
+          <div class="row g-3">
+            <div class="col-sm-6">
+            <div class="mb-4">
+              <label for="login-register-reg-firstname" class="form-label">Nama Depan <span
+                class="text-danger">*</span></label>
+              <input type="text" class="form-control" id="login-register-reg-firstname" required="">
+            </div>
+            </div>
+
+            <div class="col-sm-6">
+            <div class="mb-4">
+              <label for="login-register-reg-lastname" class="form-label">Nama Belakang <span
+                class="text-danger">*</span></label>
+              <input type="text" class="form-control" id="login-register-reg-lastname" required="">
+            </div>
+            </div>
+
+            <div class="col-12">
+            <div class="mb-4">
+              <label for="jenis-kelamin" class="form-label">Jenis Kelamin <span
+                class="text-danger">*</span></label>
+              <select class="form-select" id="jenis-kelamin" name="jenis_kelamin" required>
+              <option value="" selected disabled>Pilih Jenis Kelamin</option>
+              <option value="Perempuan">Perempuan</option>
+              <option value="Laki-laki">Laki-laki</option>
+              </select>
+            </div>
+            </div>
+
+
+            <div class="col-12">
+            <div class="mb-4">
+              <label for="login-whatsapp" class="form-label">No WhatsApp <span
+                class="text-danger">*</span></label>
+              <input type="text" class="form-control" id="login-whatsapp" required="">
+            </div>
+            </div>
+
+            <div class="col-12">
+            <div class="mb-4">
+              <label for="login-username" class="form-label">Username <span class="text-danger">*</span></label>
+              <input type="text" class="form-control" id="login-username" required="">
+            </div>
+            </div>
+
+            <div class="col-12">
+            <div class="mb-4">
+              <label for="login-register-reg-password" class="form-label">Password <span
+                class="text-danger">*</span></label>
+              <input type="password" class="form-control" id="login-register-reg-password" required="">
+            </div>
+            </div>
+
+            <div class="col-12">
+            <div class="mb-4">
+              <label for="login-register-reg-confirm-password" class="form-label">Konfirmasi Password <span
+                class="text-danger">*</span></label>
+              <input type="password" class="form-control" id="login-register-reg-confirm-password" required="">
+            </div>
+            </div>
+
+            <div class="col-12">
+            <div class="mb-4">
+              <label for="zona_waktu" class="form-label">Zona Waktu <span class="text-danger">*</span></label>
+              <select class="form-select" id="zona_waktu" name="zona_waktu" required>
+              <option value="" selected disabled>Pilih Zona Waktu</option>
+              <option value="AsiaJakarta">Asia/Jakarta - GMT+07:00 (WIB)</option>
+              <option value="AsiaMakassar">Asia/Makassar - GMT+08:00 (WITA)</option>
+              <option value="AsiaJayapura">Asia/Makassar - GMT+09:00 (WIT)</option>
+              </select>
+            </div>
+            </div>
+
+            <div class="col-12">
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="login-register-terms" required="">
+              <label class="form-check-label" for="login-register-terms">
+              Saya Menyetujui <a href="#">Syarat dan Ketentuan Layanan</a>
+              </label>
+            </div>
+            </div>
+
+            <div class="col-12">
+            <div class="d-grid">
+              <button type="submit" class="btn btn-primary btn-lg">Buat Akun</button>
+            </div>
+            </div>
+          </div>
+          </form>
+        </div>
+
+        </div>
+
+      </div>
+      </div>
+    </div>
+
+    </div>
+
+  </section><!-- /Login Register Section -->
+@endsection
